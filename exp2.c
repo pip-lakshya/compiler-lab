@@ -24,7 +24,7 @@ const char keyword[32][10] = {
 }
 
 int main(){
-FILE *fp = fopen("example.txt", "r");
+FILE *fp = fopen("exp2_file.txt", "r");
 if (fp == NULL) {
     perror("Error opening file");
     return 1;}
