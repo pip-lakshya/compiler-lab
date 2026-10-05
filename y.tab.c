@@ -20,12 +20,13 @@
 
 #define YYPURE 0
 
-#line 2 "exp9.y"
+#line 2 "anbncmdm.y"
 #include <stdio.h>
+#include <stdlib.h>
 
 int yylex();
-void yyerror(const char *s);
-#line 29 "y.tab.c"
+int yyerror(char *s);
+#line 30 "y.tab.c"
 
 #if ! defined(YYSTYPE) && ! defined(YYSTYPE_IS_DECLARED)
 /* Default: YYSTYPE is the semantic value type. */
@@ -68,126 +69,66 @@ int YYLEX_DECL();
 
 extern int YYPARSE_DECL();
 
-#define NUMBER 257
+#define A 257
+#define B 258
+#define C 259
+#define D 260
 #define YYERRCODE 256
 typedef int YYINT;
 static const YYINT yylhs[] = {                           -1,
-    0,    1,    1,    1,    1,    1,    1,
+    0,    1,    1,    2,    2,
 };
 static const YYINT yylen[] = {                            2,
-    2,    3,    3,    3,    3,    3,    1,
+    2,    3,    2,    3,    2,
 };
 static const YYINT yydefred[] = {                         0,
-    7,    0,    0,    0,    0,    0,    0,    0,    0,    1,
-    6,    0,    0,    4,    5,
+    0,    0,    0,    3,    0,    0,    1,    2,    5,    0,
+    4,
 };
 #if defined(YYDESTRUCT_CALL) || defined(YYSTYPE_TOSTRING)
 static const YYINT yystos[] = {                           0,
-  257,   40,  259,  260,  260,   43,   45,   42,   47,   10,
-   41,  260,  260,  260,  260,
+  257,  262,  263,  258,  263,  259,  264,  258,  260,  264,
+  260,
 };
 #endif /* YYDESTRUCT_CALL || YYSTYPE_TOSTRING */
-static const YYINT yydgoto[] = {                          3,
-    4,
+static const YYINT yydgoto[] = {                          2,
+    3,    7,
 };
-static const YYINT yysindex[] = {                       -40,
-    0,  -40,    0,   -9,  -27,  -40,  -40,  -40,  -40,    0,
-    0,  -39,  -39,    0,    0,
+static const YYINT yysindex[] = {                      -255,
+ -257,    0, -254,    0, -252, -256,    0,    0,    0, -253,
+    0,
 };
 static const YYINT yyrindex[] = {                         0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,   -6,   -1,    0,    0,
+    0,
 };
 #if YYBTYACC
 static const YYINT yycindex[] = {                         0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,
+    0,
 };
 #endif
 static const YYINT yygindex[] = {                         0,
-    4,
+    7,    3,
 };
-#define YYTABLESIZE 217
-static const YYINT yytable[] = {                          2,
-   10,    0,    8,    2,    0,    5,    0,    9,    3,   12,
-   13,   14,   15,   11,    8,    6,    0,    7,    0,    9,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    8,    6,    2,    7,    2,    9,    2,    3,
-    0,    3,    0,    3,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    1,
+#define YYTABLESIZE 9
+static const YYINT yytable[] = {                          1,
+    4,    1,    6,    9,    6,    8,   11,    5,   10,
 };
-static const YYINT yycheck[] = {                         40,
-   10,   -1,   42,   10,   -1,    2,   -1,   47,   10,    6,
-    7,    8,    9,   41,   42,   43,   -1,   45,   -1,   47,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   42,   43,   41,   45,   43,   47,   45,   41,
-   -1,   43,   -1,   45,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,  257,
+static const YYINT yycheck[] = {                        257,
+  258,  257,  259,  260,  259,  258,  260,    1,    6,
 };
 #if YYBTYACC
 static const YYINT yyctable[] = {                        -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,
+   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
 };
 #endif
-#define YYFINAL 3
+#define YYFINAL 2
 #ifndef YYDEBUG
 #define YYDEBUG 0
 #endif
-#define YYMAXTOKEN 257
-#define YYUNDFTOKEN 261
+#define YYMAXTOKEN 260
+#define YYUNDFTOKEN 265
 #define YYTRANSLATE(a) ((a) > YYMAXTOKEN ? YYUNDFTOKEN : (a))
 #if YYDEBUG
 #ifndef NULL
@@ -195,10 +136,7 @@ static const YYINT yyctable[] = {                        -1,
 #endif
 static const char *const yyname[] = {
 
-"$end",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"'\\n'",NULL,NULL,NULL,NULL,
-NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
-NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"'('","')'","'*'","'+'",NULL,"'-'",
-NULL,"'/'",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
+"$end",NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
 NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
 NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
 NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
@@ -211,17 +149,18 @@ NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
 NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
 NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
 NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
-NULL,NULL,NULL,"error","NUMBER","$accept","input","E","illegal-symbol",
+NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
+NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
+NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
+NULL,"error","A","B","C","D","$accept","S","X","Y","illegal-symbol",
 };
 static const char *const yyrule[] = {
-"$accept : input",
-"input : E '\\n'",
-"E : E '+' E",
-"E : E '-' E",
-"E : E '*' E",
-"E : E '/' E",
-"E : '(' E ')'",
-"E : NUMBER",
+"$accept : S",
+"S : X Y",
+"X : A X B",
+"X : A B",
+"Y : C Y D",
+"Y : C D",
 
 };
 #endif
@@ -353,21 +292,25 @@ static YYINT  *yylexp = NULL;
 
 static YYINT  *yylexemes = NULL;
 #endif /* YYBTYACC */
-#line 62 "exp9.y"
+#line 25 "anbncmdm.y"
 
-void yyerror(const char *s)
+int yyerror(char *s)
 {
-    printf("Invalid expression\n");
+    return 0;
 }
 
 int main()
 {
-    printf("Enter arithmetic expression: ");
-    yyparse();
+    printf("Enter string: ");
+
+    if (yyparse() == 0)
+        printf("Valid string\n");
+    else
+        printf("Invalid string\n");
 
     return 0;
 }
-#line 371 "y.tab.c"
+#line 314 "y.tab.c"
 
 /* For use in generated program */
 #define yydepth (int)(yystack.s_mark - yystack.s_base)
@@ -1037,63 +980,6 @@ yyreduce:
 
     switch (yyn)
     {
-case 1:
-#line 17 "exp9.y"
-	{
-          printf("Result = %d\n", yystack.l_mark[-1]);
-          return 0;
-      }
-#line 1047 "y.tab.c"
-break;
-case 2:
-#line 25 "exp9.y"
-	{
-          yyval = yystack.l_mark[-2] + yystack.l_mark[0];
-      }
-#line 1054 "y.tab.c"
-break;
-case 3:
-#line 30 "exp9.y"
-	{
-          yyval = yystack.l_mark[-2] - yystack.l_mark[0];
-      }
-#line 1061 "y.tab.c"
-break;
-case 4:
-#line 35 "exp9.y"
-	{
-          yyval = yystack.l_mark[-2] * yystack.l_mark[0];
-      }
-#line 1068 "y.tab.c"
-break;
-case 5:
-#line 40 "exp9.y"
-	{
-          if (yystack.l_mark[0] == 0)
-          {
-              printf("Error: Division by zero\n");
-              return 0;
-          }
-
-          yyval = yystack.l_mark[-2] / yystack.l_mark[0];
-      }
-#line 1081 "y.tab.c"
-break;
-case 6:
-#line 51 "exp9.y"
-	{
-          yyval = yystack.l_mark[-1];
-      }
-#line 1088 "y.tab.c"
-break;
-case 7:
-#line 56 "exp9.y"
-	{
-          yyval = yystack.l_mark[0];
-      }
-#line 1095 "y.tab.c"
-break;
-#line 1097 "y.tab.c"
     default:
         break;
     }
